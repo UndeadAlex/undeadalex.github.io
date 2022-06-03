@@ -57,6 +57,12 @@ strong {
   font-weight: var(--fw-bold);
 }
 
+a { text-decoration: none; color: var(--clr-light) }
+a:visited { text-decoration: none; color: var(--clr-light) }
+a:hover { text-decoration: none; color: var(--clr-accent) }
+a:focus { text-decoration: none; outline: none; color: var(--clr-light) }
+a:active { text-decoration: none; color: var(--clr-light) }
+
 :focus {
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
@@ -227,4 +233,22 @@ nav {display: none;}
   .service + .service {
     margin-left: 2em;
   }
+}
+
+/* Footer */
+
+.footer__link {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+/* Because funny right ? :P */
+
+.sexyCanvas {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  overflow: scroll;
 }

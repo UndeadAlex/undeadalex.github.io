@@ -8,9 +8,6 @@
         <!-- Local CSS -->
         <link rel="stylesheet" href="assets/css/stylestuff.css">
 
-        <!-- Local Javascript -->
-        <script src="assets/js/main.js" defer></script>
-
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,21 +18,13 @@
     </head>
 
     <body>
+        <canvas class="sexyCanvas" width="0" height="0"></canvas>
+
         <!-- Header -->
         <header>
             <div class="logo">
                 <img src="assets/img/mybrand-logo-full.png" style="width:15%;" alt="My brand logo">
             </div>
-
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="thingy"></span>
-            </button>
-            <nav class="nav-bar">
-                <ul class="nav-bar_list">
-                    <li class="nav-bar_item"><a href="#projects" class="nav-bar_link">Projects</a></li>
-                    <li class="nav-bar_item"><a href="#about" class="nav-bar_link">About Me</a></li>
-                </ul>
-            </nav>
         </header>
 
         <!-- Introduction Section -->
@@ -43,7 +32,7 @@
             <h1 class="section__title section__title--intro">
                 Hi, I am <strong>Marshall Dodd</strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro">Software Engineer</p>
+            <p class="section__subtitle section__subtitle--intro">Software Developer (Unity and C#)</p>
             <img class="intro__img" src="assets/img/Me01.png" alt="Ew its a picture of me :P">
         </section>
 
@@ -61,22 +50,26 @@
             <p class="section__subtitle section__subtitle--about">A Nerd, Gamer and destroyer of the nine realms.</p>
 
             <div class="about-me__body">
-                <p></p>
-                <p></p>
+                <p>Simpily put im a crazy guy who loves to make fun projects both in robotics and game development.</p>
+                <p>When i learn to actually describe myself without being needlessly mean, i will finish this area.</p>
             </div>
 
-            <img src="assets/img/Me02.png" alt="Ew its me again.">
+            <!-- <img src="assets/img/Me02.png" alt="Ew its me again."> -->
         </section>
 
         <!-- Footer -->
         <footer>
             <a href="mailto:marshalllewisdodd@gmail.com" class="footer__link">marshalllewisdodd@gmail.com</a>
             <ul class="social-list">
-                <li class="social-list__item"><a class="social-list__link" href="#">A</a></li>
-                <li class="social-list__item"><a class="social-list__link" href="#">B</a></li>
-                <li class="social-list__item"><a class="social-list__link" href="#">C</a></li>
-                <li class="social-list__item"><a class="social-list__link" href="#">D</a></li>
+                <!-- <li class="social-list__item"><a class="social-list__link" href="#">A</a></li> -->
+                <!-- <li class="social-list__item"><a class="social-list__link" href="#">B</a></li> -->
+                <!-- <li class="social-list__item"><a class="social-list__link" href="#">C</a></li> -->
+                <!-- <li class="social-list__item"><a class="social-list__link" href="#">D</a></li> -->
             </ul>
         </footer>
+
+        <!-- Local Javascript -->
+        <script src="assets/js/githubGrabber.js"></script>
+        <script src="assets/js/sketch.js"></script>
     </body>
 </html>
