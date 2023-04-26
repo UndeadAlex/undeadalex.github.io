@@ -1,4 +1,4 @@
-# dexithezombie.github.io
+# undeadalex.github.io
 **My Portfolio**
 
 This is my portfolio atleast the github side of things, ill try to keep this simple to read while also (to my standards) looking god damn sexy.
