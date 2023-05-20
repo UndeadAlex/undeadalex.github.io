@@ -23,6 +23,7 @@
   --fs-body: 1rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.125em 0.125em 0.25em rgba(0,0,0, 0.15);
+  --imgs: 0.5em 0.5em 1em rgba(0,0,0,0.5)
 }
 
 @media( min-width: 800px ) {
@@ -45,7 +46,7 @@ body {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 2em 5em 2em;
 }
 
 img {
@@ -130,11 +131,19 @@ h3 { font-size: var(--fs-h3); }
   font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro,
+.section__subtitle--intro{
+  background-color: var(--clr-accent);
+  padding: .25em 1em;
+  font-family: var(--ff-secondary);
+  text-align: center;
+  margin-bottom: 1em;
+  clip-path: inset(0px 0px 0px 25%);
+}
 .section__subtitle--about {
   background-color: var(--clr-accent);
   padding: .25em 1em;
   font-family: var(--ff-secondary);
+  text-align: center;
   margin-bottom: 1em;
 }
 
@@ -148,8 +157,29 @@ nav {display: none;}
   position: relative;
 }
 
-.intro__img {
+/* .intro__img {
   box-shadow: var(--bs);
+} */
+
+.intro__img.profilepic {
+  filter: drop-shadow(var(--imgs));
+}
+
+/* .intro__img.real: */
+
+.intro__img.real {
+  box-shadow: var(--bs);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.intro__img:hover.real {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
 }
 
 @media( min-width: 600px ) {
@@ -182,6 +212,22 @@ nav {display: none;}
   }
 }
 
+/* About me Style */
+
+.about-me {
+  padding: .25em 25%;
+}
+
+/* My Socials Style */
+
+.my-socials {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
 /* My Projects Style */
 
 .my-projects {
@@ -203,6 +249,11 @@ nav {display: none;}
   .service + .service {
     margin-left: 2em;
   }
+}
+
+.section__title--socials {
+  color: var(--clr-accent);
+  position: relative;
 }
 
 .section__title--projects {
@@ -229,6 +280,17 @@ nav {display: none;}
   background: var(--clr-light);
   opacity: 0.25;
 } */
+
+.socials {
+  position: relative;
+  justify-content: center;
+  padding: 20px;
+  font-size: 30px;
+  width:  10em;
+  scale: 1.5;
+  margin: auto;
+  translate: 2em;
+}
 
 .projects {
   display: grid;

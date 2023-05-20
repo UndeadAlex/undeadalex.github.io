@@ -22,6 +22,9 @@ function populateProjectGrid()
     {
         let repo = repos[i];
 
+        if(repo.name === "undeadalex.github.io")
+            continue;
+
         let projectDiv = document.createElement('div');
         projectDiv.className = "project";
         projectArea.appendChild(projectDiv);
