@@ -9,9 +9,13 @@
 :root {
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Roboto', monospace;
+  /* --ff-primary: 'JetBrains Mono', monospace; */
+  /* --ff-secondary: 'JetBrains Mono', monospace; */
 
   --fw-reg: 300;
   --fw-bold: 900;
+  /* --fw-reg: 200; */
+  /* --fw-bold: 600; */
 
   --clr-light: #fff;
   --clr-dark: #1c1c1c;
@@ -43,6 +47,7 @@ body {
   margin: 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
 }
 
 section {
@@ -282,9 +287,10 @@ nav {display: none;}
 } */
 
 .socials {
+  display: flex;
   position: relative;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 0px;
   font-size: 30px;
   width:  10em;
   scale: 1.5;
@@ -292,13 +298,28 @@ nav {display: none;}
   translate: 2em;
 }
 
+.socials::before {
+  position: relative;
+  transform: translate(-15px);
+  content: '';
+  display: block;
+  width: 2px;
+  background: var(--clr-light);
+  opacity: 0.25;
+}
+
+.socials > * {
+  padding: 0px 5px;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  grid-auto-rows: minmax(250px, auto);
+  grid-auto-rows: minmax(200px, auto);
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 
 .project {
