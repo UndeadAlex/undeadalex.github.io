@@ -287,15 +287,25 @@ nav {display: none;}
 } */
 
 .socials {
-  display: flex;
+  /* display: flex; */
   position: relative;
   justify-content: center;
+  vertical-align: auto;
   padding: 20px 0px;
-  font-size: 30px;
-  width:  10em;
+  /* width:  10em; */
   scale: 1.5;
   margin: auto;
   translate: 2em;
+}
+
+.socials > .link-btns {
+  font-size: 30px;
+}
+
+.socials > .discord-username {
+  padding-top: 5px;
+  font-size: 15px;
+  margin: 0%;
 }
 
 .socials::before {
