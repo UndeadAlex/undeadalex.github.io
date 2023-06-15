@@ -22,7 +22,7 @@ function populateProjectGrid()
     {
         let repo = repos[i];
 
-        if(repo.name === "undeadalex.github.io")
+        if(repo.name === "undeadalex.github.io" || repo.name === "undeadalex")
             continue;
 
         let projectDiv = document.createElement('div');
