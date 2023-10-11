@@ -4,12 +4,13 @@ const projectArea = document.getElementById('projectsDiv');
 var repos = [];
 class Repo
 {
-    constructor(name, description, isFork, url, forkUrl)
+    constructor(name, description, isFork, repourl, homepage, forkUrl)
     {
         this.name = name;
         this.description = description;
         this.isFork = isFork;
-        this.url = url;
+        this.repourl = repourl;
+        this.homepage = homepage;
         this.forkUrl = forkUrl;
     }
 }
@@ -46,8 +47,19 @@ function populateProjectGrid()
         sourceButton.className = "btn";
         sourceButton.innerText = "Source";
         sourceButton.onclick = function ()
-        { window.open(`${repo.url}`); }
+        { window.open(`${repo.repourl}`); }
         buttonGroup.appendChild(sourceButton);
+
+        if(repo.homepage !== null)
+        {
+            // Create the Button that links to the repo URL
+            let homepageButton = document.createElement('button');
+            homepageButton.className = "btn";
+            homepageButton.innerText = "Homepage";
+            homepageButton.onclick = function ()
+            { window.open(`${repo.homepage}`); }
+            buttonGroup.appendChild(homepageButton);
+        }
 
         // if(repo.isFork)
         // {
@@ -96,7 +108,7 @@ function getReposFromUsername(username, includeForks)
             //     console.log(originalRepo);
             // }
 
-            repos.push(new Repo(repo.name, repo.description, repo.fork, repo.html_url, originalRepo))
+            repos.push(new Repo(repo.name, repo.description, repo.fork, repo.html_url, repo.homepage, originalRepo))
         }
 
         console.log(repos);
