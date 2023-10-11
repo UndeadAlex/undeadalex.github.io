@@ -111,10 +111,8 @@ a:active { text-decoration: none; color: var(--clr-light) }
   font-weight: var(--fw-bold);
   letter-spacing: 2px;
 
-  margin-bottom: 2em;
-
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 1em;
+  margin-right: 1em;
 
   cursor: pointer;
   transition: transform 200ms ease-in-out;
@@ -125,6 +123,11 @@ a:active { text-decoration: none; color: var(--clr-light) }
 
 .btn:hover {
   transform: scale(1.1)
+}
+
+.button__group
+{
+  /* background-color: #a016e0; */
 }
 
 /* Typography [This took way to long to spell] */
@@ -345,8 +348,10 @@ nav {display: none;}
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  place-items: center;
+  place-content: center;
+  grid-template-columns: repeat(3, 400px/*1fr*/);
+  grid-gap: 1.5em 1em;
   grid-auto-rows: minmax(200px, auto);
   justify-content: center;
   align-content: center;
@@ -359,11 +364,20 @@ nav {display: none;}
   margin: 0 auto;
 }
 
+.project__title
+{
+
+}
+
+.project__desc
+{
+}
+
 @media( max-width: 1300px) {
   .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-gap: 1.5em 1em;
     grid-auto-rows: minmax(100px, auto);
     justify-content: center;
     align-content: center;
@@ -374,7 +388,7 @@ nav {display: none;}
   .projects {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    grid-gap: 3em 0px;
     grid-auto-rows: minmax(100px, auto);
     justify-content: center;
     align-content: center;

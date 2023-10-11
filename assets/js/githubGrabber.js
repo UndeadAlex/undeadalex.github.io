@@ -15,6 +15,9 @@ class Repo
     }
 }
 
+function isEmpty(val){
+    return (val === undefined || val == null || val.length <= 0);
+}
 
 // Big Booty, creates all the html elements for the repos.
 function populateProjectGrid()
@@ -31,10 +34,12 @@ function populateProjectGrid()
         projectArea.appendChild(projectDiv);
 
         let repoTitle = document.createElement('h3');
+        repoTitle.className = "project__title";
         repoTitle.innerText = `${repo.name}` + (repo.isFork ? " [Fork]" : "");
         projectDiv.appendChild(repoTitle);
 
         let repoDescription = document.createElement('p');
+        repoDescription.className = "project__desc";
         repoDescription.innerText = repo.description;
         projectDiv.appendChild(repoDescription);
 
@@ -50,7 +55,7 @@ function populateProjectGrid()
         { window.open(`${repo.repourl}`); }
         buttonGroup.appendChild(sourceButton);
 
-        if(repo.homepage !== null || repo.homepage !== "")
+        if(!isEmpty(repo.homepage))
         {
             // Create the Button that links to the repo URL
             let homepageButton = document.createElement('button');
@@ -86,13 +91,13 @@ function getReposFromUsername(username, includeForks)
     xmlHttp.onload = function ()
     {
         const jsonResponse = JSON.parse(xmlHttp.response);
-        
+
         // Log inital GET request.
         console.log(jsonResponse)
 
         for(let i in jsonResponse)
         {
-            let repo = jsonResponse[i]; 
+            let repo = jsonResponse[i];
 
             if(!includeForks && repo.fork)
             {
@@ -101,7 +106,7 @@ function getReposFromUsername(username, includeForks)
 
 
             let originalRepo = "";
-            
+
             // if(repo.fork)
             // {
             //     originalRepo = getForkUrl(username, repo.name);
@@ -132,7 +137,7 @@ function getReposFromUsername(username, includeForks)
 //         let jsonObj = JSON.parse(xmlHttp.responseText);
 //         return jsonObj['parent'].html_url;
 //     }
-    
+
 // }
 
 document.onload += getReposFromUsername("undeadalex", false);
