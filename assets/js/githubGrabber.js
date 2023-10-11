@@ -50,7 +50,7 @@ function populateProjectGrid()
         { window.open(`${repo.repourl}`); }
         buttonGroup.appendChild(sourceButton);
 
-        if(repo.homepage !== null)
+        if(repo.homepage !== null || repo.homepage !== "")
         {
             // Create the Button that links to the repo URL
             let homepageButton = document.createElement('button');
