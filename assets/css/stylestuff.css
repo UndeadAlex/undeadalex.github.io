@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+/* Local Font */
+
+/* @font-face {
+  font-family: "FFF-Forward";
+  src:url("../ttf/FFFFORWA.TTF");
+} */
+
 /* Custom Props */
 
 :root {
@@ -247,6 +254,10 @@ nav {display: none;}
   padding: .25em 25%;
 }
 
+.about-me__body p {
+  margin: .5em 0;
+}
+
 /* My Socials Style */
 
 .my-socials {
@@ -411,4 +422,9 @@ nav {display: none;}
   z-index: 2;
   pointer-events: none;
   overflow: scroll;
+}
+
+@media(max-width: 599px)
+{
+  
 }

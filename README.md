@@ -2,7 +2,7 @@
 
 This is the source for my github page, im using it as a nice wiki of my life sorta thingy.
 
-Simply put its probably not amazing code, visually or performant, but as i learn ill fix and change stuff.
+Simply put its probably not amazing code, visually or performant, but as i learn ill fix and change stuff so please if u see an issue let me know!
 
 **Important Note:**
 It doesnt work properly on mobile, i will get around to adjusting the css for mobile versions eventually but its really not a priority ¯\\_(ツ)_/¯
