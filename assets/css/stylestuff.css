@@ -66,6 +66,10 @@ img {
   max-width: 100%;
 }
 
+.pixel_img {
+  image-rendering: pixelated;
+}
+
 strong {
   font-weight: var(--fw-bold);
 }
@@ -279,12 +283,44 @@ nav {display: none;}
   text-align: center;
 }
 
+.highlight_projects {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+
+.highlight_project {
+  position:relative;
+
+  background-size: 125%;
+  background-position: 50%;
+
+  border-radius: 10px;
+  outline: 3px solid var(--clr-accent);
+
+  min-width: 200px;
+  max-width: 500px;
+  min-height: 175px;
+
+  vertical-align: middle;
+  margin: 1em;
+  padding: 35px 15px;
+  /* margin: 0 auto; */
+  /* z-index:2; */
+}
+
+.highlight_preview {
+  text-align: center;
+  /* clip-path: inset(50px); */
+  z-index: -1;
+}
+
 @media( min-width: 800px ) {
-  .my-projects {
+  /* .my-projects {
     display: block;
     max-width: 1000px;
     margin: 0 auto;
-  }
+  } */
 
   .service + .service {
     margin-left: 2em;
@@ -330,7 +366,6 @@ nav {display: none;}
   /* width:  10em; */
   scale: 1.5;
   margin: auto;
-  translate: 2em;
 }
 
 .socials > .link-btns {
@@ -375,13 +410,14 @@ nav {display: none;}
   margin: 0 auto;
 }
 
-.project__title
-{
-
+.project__title {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.project__desc
-{
+.project__desc {
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 @media( max-width: 1300px) {
@@ -417,14 +453,7 @@ nav {display: none;}
 
 /* Because funny right ? :P */
 
-.sexyCanvas {
-  position: absolute;
-  z-index: 2;
-  pointer-events: none;
-  overflow: scroll;
-}
-
 @media(max-width: 599px)
 {
-  
+
 }
