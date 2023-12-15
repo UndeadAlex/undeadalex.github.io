@@ -20,7 +20,7 @@
         <script>
             window.onload = function()
             {
-                // Messy i know, im sorry but its 1am :D
+                // Messy I know, im sorry but its 1am :D
                 let cd = new Date();
                 let current_age = Math.trunc((((cd.getFullYear() - 2001) * 365) + (((cd.getMonth()+1) - 6) * 31) + (cd.getDay() - 7)) / 365);
                 let pre_string = document.getElementById('auto_age').innerHTML;
@@ -38,7 +38,7 @@
             <h1 class="section__title section__title--intro">
                 Hey, I'm <strong>Alex Dodd</strong>
             </h1>
-            <p class="section__subtitle section__subtitle--intro">Aspiring Game Developer<br>Fulltime Nerd</br></p>
+            <p class="section__subtitle section__subtitle--intro">Aspiring Game Developer<br>Fulltime Nerd</p>
             <img class="intro__img profilepic pixel_img" src="assets/img/core/portrait_64.png" alt="Cute stardew style profile pic <3">
             <img class="intro__img real" src="assets/img/core/Me-512.png" alt="A less cute fleshy person.">
             <p><i>Hover to reveal a real person</i></p>
@@ -61,10 +61,14 @@
             <p class="section__subtitle section__subtitle--about">A Nerd, Gamer and Tiefling Necromancer.</p>
 
             <div class="about-me__body">
-                <p id="auto_age">Hey! I'm a {age} Year old autistic aspiring Game Developer who has been playing games from a very young age, </p>
-                <p>Starting with the PS1, I quickly discovered that whilst games themselves are great, the internal workings are what truly interest me and solidified my love for game development. </p>
-                <p>The ability to create diverse worlds with unique characters takes my breathe away every time I'm fortunate enough to experience it.</p>
-                <p>Anyway that's a little about me, any questions please contact me !</p>
+                <p id="auto_age">
+                    Hey! I'm a {age} Year old autistic aspiring Game Developer who has been playing games from a very young age,<br>
+                    Starting with the PS1, I quickly discovered that whilst games themselves are great, the internal workings are what truly interest me and solidified my love for game development.<br>
+                    The ability to create diverse worlds with unique characters takes my breath away every time I'm fortunate enough to experience it.<br>
+                    I mainly use C++ and Unreal for my projects currently however I love to learn new languages and techniques.<br>
+                    Anyway that's a little about me, any questions please contact me!
+                </p>
+
             </div>
 
         </section>
@@ -72,7 +76,7 @@
         <!-- Bloggy Section -->
         <section class="my-projects" id="projects">
             <h2 class="section__title section__title--projects">Highlight Projects</h2>
-            <p class="smollUnderline">A collection of projects i deamed important to show</p>
+            <p class="smollUnderline">A collection of projects I deamed important to show</p>
             <div class="highlight_projects" id="">
                 <!-- <p>Wooooow wait a minute this place is empty ?. yep that's because im a damn perfectionist with personal projects, soooo ye... im trying to work on that.</p> -->
                 <a href="projects/wavesurival.html" class="highlight_project" style="background-image: url(assets/img/projects/wavesurvival/ingame_blur.png);">
