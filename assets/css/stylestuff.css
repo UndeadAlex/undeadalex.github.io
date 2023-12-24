@@ -296,6 +296,8 @@ nav {display: none;}
   background-position: 50%;
 
   border-radius: 10px;
+
+  background-size: 100%;
   outline: 3px solid var(--clr-accent);
 
   min-width: 200px;
@@ -305,8 +307,14 @@ nav {display: none;}
   vertical-align: middle;
   margin: 1em;
   padding: 35px 15px;
+
+  transition: background-size .3s
   /* margin: 0 auto; */
   /* z-index:2; */
+}
+
+.highlight_project:hover {
+  background-size: 120%;
 }
 
 .highlight_preview {

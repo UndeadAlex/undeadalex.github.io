@@ -74,11 +74,11 @@ strong {
   font-weight: var(--fw-bold);
 }
 
-/* a { text-decoration: none; color: var(--clr-light) }
-a:visited { text-decoration: none; color: var(--clr-light) }
-a:hover { text-decoration: none; color: var(--clr-accent) }
-a:focus { text-decoration: none; outline: none; color: var(--clr-light) }
-a:active { text-decoration: none; color: var(--clr-light) } */
+a { text-decoration: underline; color: var(--clr-light) }
+a:visited { text-decoration: underline; color: var(--clr-light) }
+a:hover { text-decoration: underline; color: var(--clr-accent) }
+a:focus { text-decoration: underline; outline: none; color: var(--clr-light) }
+a:active { text-decoration: underline; color: var(--clr-light) }
 
 :focus {
   outline: 3px solid var(--clr-accent);
