@@ -49,6 +49,7 @@
 /* Styles */
 
 body {
+  display: block;
   background: var(--clr-dark);
   color: var(--clr-light);
   margin: 0;
@@ -463,6 +464,7 @@ nav {display: none;}
 
 .mobile-support {
   opacity: 0;
+  display:none;
 }
 
 @media(max-width: 599px) {
@@ -472,6 +474,7 @@ nav {display: none;}
     opacity: 0;
   }
   .mobile-support {
+    display: block;
     opacity: 1;
   }
 }
