@@ -461,7 +461,17 @@ nav {display: none;}
 
 /* Because funny right ? :P */
 
-@media(max-width: 599px)
-{
+.mobile-support {
+  opacity: 0;
+}
 
+@media(max-width: 599px) {
+
+  body > *:not(.mobile-support) {
+    display:none;
+    opacity: 0;
+  }
+  .mobile-support {
+    opacity: 1;
+  }
 }
