@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>John Horton Projects</title>
+
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="../assets/css/uniqueprojectstyle.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <!-- This fixes a strange bug with transitions in css. Not a clue why. -->
+        <script></script>
+
+        <!-- FontAwesome Access -->
+        <script src="https://kit.fontawesome.com/f1927533e8.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <a href="../index.html" class="return_button">
+            <i class="fa-solid fa-rotate-left"> Home</i>
+        </a>
+        <!-- Project Section -->
+        <section class="my-projects" id="projects">
+            <h1 class="section__title section__title--projects">John Horton</h1>
+            <p class="titleUnderline">Projects from John Horton's Beginner to C++ Game Programming book</p>
+            <p>Project Date: Late 2023 - Current</p>
+            <div class="project_desc">
+                <h2 class="section__subtitle subtitleUnderline">Timber</h2>
+                <p>
+                    This is Timber, the first project in the book, it is based-on Timberman developed by Digital Melody. It is an incredibly fun addictive casual game where you need to chop trees and avoid branches while making sure you have enough time!
+                </p>
+                <p>
+                    The project works through beginner C++ concepts such as loops, conditional statements, using classes and calling functions as well as covering setting up SFML and its basics such as creating a window and basic game loop with events. At the end of the project there are some suggestions for improvements such as only updating the text when needed instead of each frame, more environment design, HUD visibility etc.
+                </p>
+                <p>
+                    I implemented my own changes to the code while following along with the project such as using classes for the bee and clouds, as well as making manager classes for loading textures and audio into memory and being able to access them using an unordered map.
+                </p>
+            </div>
+            <!-- <div class="project_desc">
+                <h2 class="section__subtitle subtitleUnderline">Pong</h2>
+                <p>
+                    pingy pong!
+                </p>
+            </div> -->
+            <div class="project_desc">
+                <h2 class="section__subtitle subtitleUnderline">Screenshots</h2>
+                <p style="filter: brightness(75%);"><i>Timber Screenshots</i></p>
+                <p style="filter: brightness(75%);"><i>(Left) InGame with DebugUI, (Right) Game Over</i></p>
+                <div class="project_screenshots">
+                    <img src="../assets/img/projects/johnhorton/timber_ingame.png" alt="" style="width: 50%;">
+                    <img src="../assets/img/projects/johnhorton/timber_gameover.png" alt="" style="width: 50%;">
+                </div>
+                <!-- <p style="filter: brightness(75%);"><i>(Left) Ingame, (Middle) Editor View, (Right) Prototype Zombie Model</i></p>
+                <div class="project_screenshots">
+                    <img src="../assets/img/projects/johnhorton/timber_ingame.png" alt="" style="width: 50%;">
+                    <img src="../assets/img/projects/johnhorton/timber_gameover.png" alt="" style="width: 50%;">
+                </div> -->
+            </div>
+        </section>
+    </body>
+</html>

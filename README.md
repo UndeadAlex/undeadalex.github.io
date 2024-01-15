@@ -16,4 +16,4 @@ but ignoring that bit, I mainly had fun doing this, learning css and html more t
 
 anyway, im done here.. well not done it will be updated but like done reflecting and stuff.
 
--Alex <3
+-Alex 💜

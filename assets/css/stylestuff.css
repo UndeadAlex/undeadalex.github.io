@@ -75,6 +75,10 @@ strong {
   font-weight: var(--fw-bold);
 }
 
+.justify_text {
+  text-align: justify;
+}
+
 a { text-decoration: none; color: var(--clr-light) }
 a:visited { text-decoration: none; color: var(--clr-light) }
 a:hover { text-decoration: none; color: var(--clr-accent) }

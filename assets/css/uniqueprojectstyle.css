@@ -74,6 +74,10 @@ strong {
   font-weight: var(--fw-bold);
 }
 
+.justify_text {
+  text-align: justify;
+}
+
 a { text-decoration: underline; color: var(--clr-light) }
 a:visited { text-decoration: underline; color: var(--clr-light) }
 a:hover { text-decoration: underline; color: var(--clr-accent) }
@@ -197,7 +201,7 @@ nav {display: none;}
 .project_desc {
   margin: 0 auto;
   margin-bottom: 1em;
-  max-width: 60%;
+  max-width: 70%;
 }
 
 .project_desc p {
