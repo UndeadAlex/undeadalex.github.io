@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wave Survival</title>
+
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="../assets/css/uniqueprojectstyle.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <!-- This fixes a strange bug with transitions in css. Not a clue why. -->
+        <script></script>
+
+        <!-- FontAwesome Access -->
+        <script src="https://kit.fontawesome.com/f1927533e8.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <a href="../index.html" class="return_button">
+            <i class="fa-solid fa-rotate-left"> Home</i>
+        </a>
+        <!-- Project Section -->
+        <section class="my-projects" id="projects">
+            <h1 class="section__title section__title--projects">Wave Surival Shooter</h1>
+            <p class="titleUnderline">*zombie noises*</p>
+            <p>Project Date: October 2023 - Present</p>
+            <div class="project_desc">
+                <h2 class="section__subtitle subtitleUnderline">Description</h2>
+                <p>Get ready for some updates, laughs and a journey!</p>
+                <div>
+                    <h3 class="section__subtitle subtitleUnderline">Initial Post</h3>
+
+                    <p class="justify_text">Welcome everyone to the not so fantastical but still pretty cool first update to my small COD Inspired zombie game. The initial build has only the simple mechanics that I needed to get working first, such as the wave system with spawning and knowing when to start the next wave using events, the simple weapon which is a modified version of the first person template but at this point other than the mesh there is almost no similarity, simple chase AI for the zombies, the universal health system that is built to work for both the zombies and the player and finally the UI again hooking into events such as OnHeal, OnDamaged etc.</p>
+                    <p class="justify_text">So, first up the Wave System! It’s not overly complicated it relies on event dispatchers from each spawned zombie, when a zombie dies, the game mode receives the event call and decrements a counter of total zombies alive. When both the number of zombies alive and the number left to spawn are less than or equal to 0 it considers the wave ended and does a 4 second delay then begins the wave setup again.</p>
+                    <p class="justify_text">Next the weapon, there isn’t much to say as currently its primary goal is as a testing weapon, so its high damage using a simple line trace. More specifically, the weapon uses PlayerCameraManager to get its location and forward vector plugged into a line trace, if it hits something, it checks if the hit object has a health component and if it does spawns the correct particle effect and does damage, else it will spawn a generic hit effect and if it doesn’t hit anything in range it does nothing, It continues to go and play sound and play the fire montage. Also has a simple reloading system if the players ammo is less than max, they can reload, it does a montage and sets the ammo to the max. Eventually I would like to add a proper reload animation as reload speed depends on the animation which is currently 8 frames long and max it consume a reserve pile of ammo so the play can eventually run out. But that’s future Alex problems.</p>
+                    <center><img src="../assets/img/projects/wavesurvival/levelview.png" alt="" style="width: 50%;"></center>
+                    <p class="justify_text">We arrive at my living nightmares, AI is one topic that I have always loved with a deep fascination, however it has also always been very confusing for me to wrap my head around, with that said I can’t wait to get into the weeds with learning more about AI and hopefully I figure it out during this project. The AI currently will just chase the player and stop when reaching them, I know its groundbreaking, please hold the applause.</p>
+                    <p class="justify_text">The health system all though very small currently is something that was important to get working right away and it does currently perfectly, I might need more functionality later down the line but I know a big problem I tend to suffer from is feature creep which leads to burn out and then that project never seeing the light of day, I don’t want this to happen for this project so I hopefully don’t fall to feature creep, some more quick details about the health system, it stores health as a float (I might alter this to work with integers instead as currently all the values I’m using are whole values.) It has simple functions to get the current health, get the max health, the current health percentage, set health, wherever or not the entity is dead, and a generic Damage function which internally uses SetHealth while also calling events where necessary.</p>
+                    <p class="justify_text">Last up on this long post is the UI! Another fascination of mine is how people manage to make these stunning UI’s, I’m slowly trying to learn common practices and layout tips, currently the UI is in a prototype state where it has information the player needs while not going overboard on fanciness.</p>
+                    <center><img src="../assets/img/projects/wavesurvival/ingame.png" alt="" style="width: 50%;"></center>
+                    <p class="justify_text">Well, there you have it, the probably not so informative but still fun to write “update” on my COD inspired zombie shooter. I hope you had fun reading it, and I wouldn’t blame you if you only skim read it.</p>
+                    <p>Hope you all have a fantastic day<br><strong>Alex</strong></p>
+                </div>
+                <div>
+                    <h3 class="section__subtitle subtitleUnderline">Update 1</h3>
+                    <p class="justify_text">Welcome back to the untitled game where you murder innocent brain eating people. This update is nothing extreme, I implemented the AI correctly this time so instead of just following the player they now attack every 1.5s with a random deviation of 0.5s. Along with this I found many bugs varying from the particle effects not spawning, to the zombie becoming immortal, I found out I was doing something rather inefficient and attempted to correct that so hopefully success. I also *improved* the zombie’s mesh, they are still T-Posing as I think it looks adorable and I can’t animate to save my life. Other than those 3 points not much else has been implemented, I’m hoping for the next update to implement a score/money system.</p>
+                    <center><img src="../assets/img/projects/wavesurvival/sammy.png" alt="" style="width: 50%;"></center>
+                    <p>I added a video into the extras section below that is a small run of the project. Sorry there is no real audio in the game yet.</p>
+                    <p>As always have an fantastic day!<br><strong>Alex</strong></p>
+                </div>
+            </div>
+            <div class="project_desc">
+                <h2 class="section__subtitle subtitleUnderline">Extras</h2>
+                <!-- <p style="filter: brightness(75%);"><i>(Left) Ingame, (Middle) Editor View, (Right) Prototype Zombie Model</i></p> -->
+                <div class="project_screenshots">
+                    <iframe width="80%" height="500px" src="https://www.youtube.com/embed/-3qkEzH5_Bs?si=udZ9KY4xGL9M46sE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- <img src="../assets/img/projects/wavesurvival/ingame.png" alt="" style="width: 50%;"> -->
+                    <!-- <img src="../assets/img/projects/wavesurvival/levelview.png" alt="" style="width: 50%;"> -->
+                    <!-- <img src="../assets/img/projects/wavesurvival/sammy.png" alt="" style="width: 50%;"> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer_email">
+            <p style="margin:0;">If you think i can improve on my work, please let me know! </p>
+            <a href="mailto:alexundeaddodd@gmail.com" style="margin:0;">alexundeaddodd@gmail.com</a>
+        </footer>
+    </body>
+</html>

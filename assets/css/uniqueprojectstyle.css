@@ -269,3 +269,9 @@ nav {display: none;}
   background: var(--clr-light);
   opacity: 0.25;
 }
+
+.footer_email {
+  display: block;
+  text-align: center;
+  margin: 25px auto;
+}
