@@ -222,7 +222,8 @@ nav {display: none;}
 }
 
 .project_screenshots img {
-  margin: 5px;
+  margin: auto;
+  padding: 5px;
 }
 
 
@@ -274,4 +275,41 @@ nav {display: none;}
   display: block;
   text-align: center;
   margin: 25px auto;
+}
+
+.img_row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.img_two_column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.img_three_column {
+  flex: 33%;
+  padding: 0 4px;
+}
+
+.img_four_column {
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.img_two_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.img_three_column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.img_four_column img {
+  margin-top: 8px;
+  vertical-align: middle;
 }

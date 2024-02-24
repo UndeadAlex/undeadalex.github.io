@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sheep Wrangler</title>
+
+        <!-- Local CSS -->
+        <link rel="stylesheet" href="../assets/css/uniqueprojectstyle.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <!-- This fixes a strange bug with transitions in css. Not a clue why. -->
+        <script></script>
+
+        <!-- FontAwesome Access -->
+        <script src="https://kit.fontawesome.com/f1927533e8.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <a href="../index.html" class="return_button">
+            <i class="fa-solid fa-rotate-left"> Home</i>
+        </a>
+        <!-- Project Section -->
+        <section class="my-projects" id="projects">
+            <h1 class="section__title section__title--projects">Sheep Wrangler</h1>
+            <p class="titleUnderline">Shaders, Audio and SHEEP DESTROYER!</p>
+            <p>Project Date: January 2024 - Current</p>
+            <div class="project_desc">
+                <h2 class="section__subtitle subtitleUnderline">Description</h2>
+                <p>
+                    Here is a fun project that I feel lucky to be able to work on. Initially my contribution was to be Audio Design, however after occasionally helping the lead developer with other tasks my role in the project was extended, now I am not only working on audio design but shaders and additional programming as well. For the demo I have worked on two shaders and three scripts. Of the two shaders one implemented the use of sprite sheets and SDFs (Image 4) whilst the other was a modified standard shader to add a tint mask which allows the tinting of individual portions of the material instead of the tint affecting every part indiscriminately.<br>
+                    The three scripts I have been working on are a Settings Manager, an as of yet unseen Customisation Manager, and an Audio Manager. The Settings Manager makes exhaustive use of PlayerPrefs to save custom settings that Unity doesn’t keep track of. Once this system is functional, I also have plans to write a custom save-load system that works in tandem with it.<br>
+                    The Customisation Manager -although not in the demo build- handles setting the colour of the sheep’s wool as well as giving them little hats, I’m handling this using a ScriptableObject that contains a global list of hats which a manager uses to see which hats are available to the player.<br>
+                    Finally, the audio manager, which whilst fun to write did suffer some feature creep during development, in the end becoming less of a “manager” and more of a controller for audio sources. Rather than having a single instance of this script to control all audio sources, there is one controller per audio source. Each controller has an Enum to determine its mode (Single, Queue, Random), when the Start Method is run, respective functions are called depending on the current mode, each mode having unique variables associated with them, because of this, I thought it necessary to write a custom inspector for the script. This inspector hid any variables not associated with the mode and displayed errors and warnings for when there was no AudioClips, AudioSource, etc.<br>
+                    Due to this project being in active development I first acquired the lead developer’s permission before writing this. If you would like to see more of the project please view the video below, which contains an update on the project with many more to come!
+                </p>
+                <p>You can download the demo here from Itch.io.</p>
+                <a href="https://hawkesbyte.itch.io/flockingfrenzy" class="standard_button">Download</a>
+            </div>
+            <div class="project_desc">
+                <h2 class="section__subtitle subtitleUnderline">Screenshots and Videos</h2>
+                <p style="filter: brightness(75%);"><i>Images are Ingame and the shader i wrote<br>Video is by the lead developer</i></p>
+                <div class="project_screenshots" style="display:flex; flex-wrap: wrap; overflow-x: auto; white-space: nowrap;">
+                    <div class="img_row">
+                        <div class="img_three_column">
+                            <img src="../assets/img/projects/sheepwrangler/level01.png" alt="" >
+                            <img src="../assets/img/projects/sheepwrangler/myshader.png" alt="" >
+                        </div>
+                        <div class="img_three_column">
+                            <img src="../assets/img/projects/sheepwrangler/level04.png" alt="" >
+                            <img src="../assets/img/projects/sheepwrangler/originalinspector.png" alt="" >
+                        </div>
+                        <div class="img_three_column">
+                            <img src="../assets/img/projects/sheepwrangler/level06.png" alt="" >
+                            <img src="../assets/img/projects/sheepwrangler/custominspector.png" alt="" >
+                        </div>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5l0ShMoEpyE?si=dpwf4-7diETpr44b" title="Preview" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer_email">
+            <p style="margin:0;">If you think i can improve on my work, please let me know! </p>
+            <a href="mailto:alexundeaddodd@gmail.com" style="margin:0;">alexundeaddodd@gmail.com</a>
+        </footer>
+    </body>
+</html>
