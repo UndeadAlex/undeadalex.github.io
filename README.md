@@ -2,7 +2,7 @@
 
 This is the source for my GitHub page, I’m using it as a nice wiki of my life and I hope this will end up showing my progression along the game development path :D
 
-**TOOD:**
+**TODO:**
 Fix mobile/low-width devices displaying strangely (currently displays message about screen size).
 
 ## Reflection
