@@ -463,6 +463,10 @@ nav {display: none;}
   margin: 0 auto;
 }
 
+.text_underline {
+  text-decoration: underline;
+}
+
 
 /* Because funny right ? :P */
 
