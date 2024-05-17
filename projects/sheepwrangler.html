@@ -36,10 +36,11 @@
                     The three scripts I have been working on are a Settings Manager, an as of yet unseen Customisation Manager, and an Audio Manager. The Settings Manager makes exhaustive use of PlayerPrefs to save custom settings that Unity doesn’t keep track of. Once this system is functional, I also have plans to write a custom save-load system that works in tandem with it.<br>
                     The Customisation Manager -although not in the demo build- handles setting the colour of the sheep’s wool as well as giving them little hats, I’m handling this using a ScriptableObject that contains a global list of hats which a manager uses to see which hats are available to the player.<br>
                     Finally, the audio manager, which whilst fun to write did suffer some feature creep during development, in the end becoming less of a “manager” and more of a controller for audio sources. Rather than having a single instance of this script to control all audio sources, there is one controller per audio source. Each controller has an Enum to determine its mode (Single, Queue, Random), when the Start Method is run, respective functions are called depending on the current mode, each mode having unique variables associated with them, because of this, I thought it necessary to write a custom inspector for the script. This inspector hid any variables not associated with the mode and displayed errors and warnings for when there was no AudioClips, AudioSource, etc.<br>
+                    Update 1 (17/05/2024): I’ve created a Saving and Loading system that is persistent between scenes, this system is used instead of PlayerPrefs to save video and audio settings as well as gameplay variables such as unlocked hats, materials and coins collected. Also created the customisation system and its associated UI, to make this work I made use of ScriptableObjects to hold information about the hats and materials such as the name, description, icon and prefab/material reference.<br>
                     Due to this project being in active development I first acquired the lead developer’s permission before writing this. If you would like to see more of the project please view the video below, which contains an update on the project with many more to come!
                 </p>
                 <p>You can download the demo here from Itch.io.<br>or check out our steam page!</p>
-                <a href="https://hawkesbyte.itch.io/flockingfrenzy" class="standard_button" target="_blank" rel="noopener noreferrer">Download</a>
+                <a href="https://hawkesbyte.itch.io/flockingfrenzy" class="standard_button" target="_blank" rel="noopener noreferrer">Itch.io</a>
                 <a href="https://store.steampowered.com/app/2944690/Oh_Flock/" class="standard_button" target="_blank" rel="noopener noreferrer">Steam</a>
             </div>
             <div class="project_desc">
@@ -60,7 +61,7 @@
                             <img src="../assets/img/projects/sheepwrangler/customiser_early.png" alt="" >
                         </div>
                     </div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5l0ShMoEpyE?si=dpwf4-7diETpr44b" title="Preview" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=4fk49LeX9wjEgmBH&amp;list=PLnklErauWs5hzU7T1YEcW4YrAB6SBr4Xu" title="Preview" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
