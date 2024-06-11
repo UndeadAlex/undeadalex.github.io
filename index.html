@@ -22,7 +22,16 @@
             {
                 // Messy I know, im sorry but its 1am :D
                 let cd = new Date();
-                let current_age = Math.trunc((((cd.getFullYear() - 2001) * 365) + (((cd.getMonth()+1) - 6) * 31) + (cd.getDay() - 7)) / 365);
+                let birthDate = new Date(2001,6,7);
+
+                let test = cd >= birthDate;
+                let current_age = 0;
+
+                if(test)
+                    current_age = (cd.getFullYear() - 2001)
+                else
+                    current_age = (cd.getFullYear() - 2001) - 1
+
                 let pre_string = document.getElementById('auto_age').innerHTML;
                 document.getElementById('auto_age').innerHTML = pre_string.replace("{age}", current_age);
             }
@@ -85,6 +94,10 @@
             <p class="smollUnderline">Blog type area for specific projects</p>
             <div class="highlight_projects" id="">
                 <!-- <p>Wooooow wait a minute this place is empty ?. yep that's because im a damn perfectionist with personal projects, soooo ye... im trying to work on that.</p> -->
+                <a href="projects/personal-game.html" class="highlight_project" style="background-image: url(assets/img/projects/personal-game/preview.png);">
+                    <h3 class="project__title">Can you come out tonight?</h3>
+                    <p class="project__desc">A game about the social anxiety</p>
+                </a>
                 <a href="projects/sheepwrangler.html" class="highlight_project" style="background-image: url(assets/img/projects/sheepwrangler/preview_blur.png);">
                     <h3 class="project__title">Oh, Flock!</h3>
                     <p class="project__desc">A cozy indie game where you have to wrangle sheep!</p>
@@ -120,10 +133,6 @@
                 <a href="projects/gamejam2020.html" class="highlight_project" style="background-image: url(assets/img/projects/gamejam2020/preview_blur.png);">
                     <h3 class="project__title">University GameJam 2020</h3>
                     <p class="project__desc">A 24-Hour Game Jam which was run by the university.</p>
-                </a>
-                <a href="projects/johnhorton.html" class="highlight_project" style="background-image: url(assets/img/projects/johnhorton/timber_preview.png);">
-                    <h3 class="project__title">John Horton Projects</h3>
-                    <p class="project__desc">The projects from John Horton's Beginners to C++ Game Programming</p>
                 </a>
                 <a href="projects/canvasbot.html" class="highlight_project" style="background-image: url(assets/img/projects/canvasbot/closestdate_blur.png);">
                     <h3 class="project__title">Canvas Discord Bot</h3>
