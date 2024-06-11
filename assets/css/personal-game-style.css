@@ -117,7 +117,7 @@ a:active { text-decoration: underline; color: var(--clr-light) }
   padding: 0.5em 1.5em;
   border-style: none;
 
-  background: var(--clr-accent);
+  background: var(--clr-dark);
   color: var(--clr-light);
 
   text-transform: uppercase;
@@ -139,7 +139,7 @@ a:active { text-decoration: underline; color: var(--clr-light) }
 
 .standard_button:hover {
   transform: scale(1.1);
-  background: var(--clr-accent);
+  background: var(--clr-dark);
   color: var(--clr-light);
 }
 
@@ -149,7 +149,9 @@ a:active { text-decoration: underline; color: var(--clr-light) }
   padding: 0.75em 1.25em;
   border-style: none;
 
-  background: var(--clr-accent);
+  background: var(--clr-dark);
+  border-color: var(--clr-light);
+  border-style: dashed;
   color: var(--clr-light);
 
   text-transform: uppercase;
@@ -170,8 +172,9 @@ a:active { text-decoration: underline; color: var(--clr-light) }
 
 .return_button:hover {
   scale: 1.1;
-  background: var(--clr-accent);
+  background: var(--clr-dark);
   color: var(--clr-light);
+  border-style: solid;
 }
 
 /* Typography [This took way to long to spell] */
