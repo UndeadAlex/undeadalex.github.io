@@ -25,6 +25,7 @@
   /* --fw-bold: 600; */
 
   --clr-light: #fff;
+  --clr-lgrey: #888;
   --clr-dark: #1c1c1c;
   --clr-accent: #a016e0;
 
@@ -297,13 +298,15 @@ nav {display: none;}
 .highlight_project {
   position:relative;
 
-  background-size: 125%;
-  background-position: 50%;
-
+  background-position: 50%;  
+  background-repeat: no-repeat;
+  background-size: 155%;
+  
   border-radius: 10px;
-
-  background-size: 100%;
-  outline: 3px solid var(--clr-accent);
+  border-width: 3px;
+  border-style: solid;
+  border-color: var(--clr-accent);
+  color: var(--clr-light);
 
   min-width: 200px;
   max-width: 500px;
@@ -313,13 +316,17 @@ nav {display: none;}
   margin: 1em;
   padding: 35px 15px;
 
-  transition: background-size .3s
-  /* margin: 0 auto; */
-  /* z-index:2; */
+  transition: background-size .3s;
 }
 
 .highlight_project:hover {
-  background-size: 120%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
+  border-width: 3px;
+  border-style: dashed;
+  border-color: var(--clr-light);
+  color: var(--clr-accent);
 }
 
 .highlight_preview {
