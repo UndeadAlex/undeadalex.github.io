@@ -308,7 +308,7 @@ nav {display: none;}
   border-color: var(--clr-accent);
   color: var(--clr-light);
 
-  min-width: 200px;
+  min-width: 300px;
   max-width: 500px;
   min-height: 175px;
 
