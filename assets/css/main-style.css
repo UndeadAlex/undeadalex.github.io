@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+/* .ubuntu-mono-regular {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.ubuntu-mono-bold {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.ubuntu-mono-regular-italic {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.ubuntu-mono-bold-italic {
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+   */
+
+:root {
+    --ff-primary: 'Ubuntu Mono', monospace;
+    --ff-secondary: 'Ubuntu Mono', monospace;
+    /* --ff-primary: 'JetBrains Mono', monospace; */
+    /* --ff-secondary: 'JetBrains Mono', monospace; */
+  
+    --fw-reg: 400;
+    --fw-bold: 700;
+    /* --fw-reg: 200; */
+    /* --fw-bold: 600; */
+  
+    --clr-light: #fff;
+    --clr-lgrey: #888;
+    --clr-dark: #1c1c1c;
+    --clr-accent: #a016e0;
+  
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1.4rem;
+  
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25), 0.125em 0.125em 0.25em rgba(0,0,0, 0.15);
+    --imgs: 0.5em 0.5em 1em rgba(0,0,0,0.5);
+
+    --main-content-margin: 5rem;
+  }
+  
+body {
+    display: block;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-reg);
+}
+  
+a { text-decoration: none; color: var(--clr-light) }
+a:visited { text-decoration: none; color: var(--clr-light) }
+a:hover { text-decoration: none; color: var(--clr-accent) }
+a:focus { text-decoration: none; outline: none; color: var(--clr-light) }
+a:active { text-decoration: none; color: var(--clr-light) }
+
+/* width */
+body::-webkit-scrollbar { width: 10px; height: 10px; }
+/* Track */
+body::-webkit-scrollbar-track { background: #3c3c3c; }
+/* Handle */
+body::-webkit-scrollbar-thumb { background: var(--clr-accent); }
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover { background: hsl(281, 100%, 32%); }
+
+/* Sidebar Nav Style */
+
+.sidebar {
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    font-size: var(--fs-body);
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.sidebar-item {
+    width:100%;
+}
+
+.sidebar-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--clr-light);
+    text-decoration: none;
+}
+
+.nav-link i {
+    max-width: 32px;
+    max-height: 32px;
+
+    font-size: 32px;
+    aspect-ratio: 1/1;
+    margin: 0 1.5rem;
+}
+
+.nav-link img {
+    max-width: 32px;
+    max-height: 32px;
+
+    font-size: 32px;
+    aspect-ratio: 1/1;
+    margin: 0 1.5rem;
+}
+
+.link-text {
+    display: none;
+}
+
+.sidebar:hover {
+    width: 12rem;
+}
+
+.sidebar:hover .link-text {
+    display: block;
+}
+
+#pin {
+    width: 12rem;
+}
+
+#pin .link-text:last-child {
+    display: block;
+}
+
+/* Main content */
+.main-content {
+    height: 100vh;
+    margin-left: var(--main-content-margin); /* Same as the width of the sidebar + 10px for spacing */
+    padding: 12rem;
+}
+
+.overlap-img {
+    position: relative;
+}
+
+.overlap-img img {
+    position: absolute;
+    top: -17rem;
+    left: 0;
+}
+
+.home_section {
+    position:absolute;
+    top: 25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Old Site CSS */
+
+.section__title {
+    margin-bottom: .25em;
+}
+  
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+  
+.section__title--intro strong {
+    display: block;
+}
+
+.intro__img.profilepic {
+    filter: drop-shadow(var(--imgs));
+}
+
+.intro__img.real {
+    box-shadow: var(--bs);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.real {
+    opacity: 0;
+
+    position: relative;
+    top:0;
+    left:0;
+}
+  
+.intro__img:hover.real {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+.profilepic {
+    opacity: 1;
+
+    position: relative;
+    top:0;
+    left:0;
+}
+
+.intro__img:hover.profilepic {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
